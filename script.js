@@ -9,6 +9,12 @@ snake[0] = {
 }
 
 let direction = 'right';
+//math.floor retira a parte flutuante do numero retornado do random
+//cria a comida em posições aleatorias
+let food = {
+    x: Math.floor(Math.random() * 15 + 1) * box,
+    y: Math.floor(Math.random() * 15 + 1) * box
+}
 
 function criarBG(){
     context.fillStyle = "lightgreen";
@@ -20,6 +26,12 @@ function criarSnake(){
         context.fillStyle = 'green';
         context.fillRect(snake[i].x, snake[i].y, box, box);
     }
+}
+
+//criar comida
+function drawFood(){
+    context.fillStyle = 'red';
+    context.fillRect(food.x, food.y, box, box);
 }
 
 document.addEventListener('keydown', update); // escuta o click da tecla
@@ -56,6 +68,7 @@ function iniciarJogo(){
     }
     criarBG();
     criarSnake();
+    drawFood();
 
     // posição inicial
     let snakeX = snake[0].x;
