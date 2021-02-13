@@ -66,6 +66,7 @@ function iniciarJogo(){
     if(snake[0].y < 0 && direction == 'up'){
         snake[0].y = 16 * box;
     }
+
     criarBG();
     criarSnake();
     drawFood();
@@ -80,7 +81,15 @@ function iniciarJogo(){
     if(direction == 'up'){ snakeY -= box;}
     if(direction == 'down'){ snakeY += box;}
 
-    snake.pop(); // retira o ultimo elemento do array
+    //verifica se a cobra passou por cima da comida
+    if(snakeX != food.x || snakeY != food.y){
+        snake.pop(); // retira o ultimo elemento do array
+
+    }else{
+        food.x = Math.floor(Math.random() * 15 + 1) * box;
+        food.y = Math.floor(Math.random() * 15 + 1) * box
+    }
+
 
     //criando uma nova cabeça a frente
     let newHead = {
