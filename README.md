@@ -2,9 +2,9 @@
 
 Projeto faz parte do último modulo do BootCamp HTML Web Developer da Digital Innovation One.
 
-**Telas**
+**Tela do Jogo**
 
-:hourglass_flowing_sand: Em construção
+![Screenshot_2021-03-02 Snake Game](https://user-images.githubusercontent.com/63053569/109652413-85eca780-7b3e-11eb-96cb-2bc2e5eb017d.png)
 
 ### :page_with_curl: Informações sobre o Projeto
 
